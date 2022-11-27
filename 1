@@ -1,0 +1,32 @@
+oneSecunda = 1
+print("one Secunda -", oneSecunda)
+oneMinuta = oneSecunda * 60
+print("one Minuet -", oneMinuta, "seconds")
+oneHour = oneMinuta * 60
+print("one Hour -", oneHour, "seconds")
+oneDay = oneHour * 24
+print("one Day -", oneDay, "seconds")
+oneMonth = oneDay * 28
+print("one simple February -", oneMonth, "seconds")
+mainMonth = oneDay * 30
+print("one Month with 30ty days -", mainMonth, "seconds")
+addMonth = oneDay * 31
+print("one Month with 31 days -", addMonth, "seconds")
+oneYear = (addMonth * 7) + (mainMonth * 4) + oneMonth
+print("one simple Year -", oneYear, "seconds")
+addYear = (addMonth * 7) + (mainMonth * 4) + oneMonth + oneDay
+print("one leap Year -", addYear, "seconds")
+print()
+actYear = int(input("""If you want to know
+a quantity of seconds in the some Year
+please, input it here one : """))
+real1Year = actYear / 4
+real2Year = actYear // 4
+if real1Year == real2Year:
+  print()
+  print("In choosen -", actYear, "will -", addYear, "saconds")
+  print("You chose a leap year.")
+else:
+  print()
+  print("In choosen -", actYear, "will -", oneYear, "seconds")
+  print("You chose a simple year.")
